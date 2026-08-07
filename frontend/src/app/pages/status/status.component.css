@@ -1,0 +1,59 @@
+.status-page {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.status-card {
+  border-radius: 20px;
+  border: 1px solid var(--color-border);
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 24px 0;
+}
+
+.flag {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.flag.ok {
+  color: #34d399;
+}
+
+.flag.bad {
+  color: #f87171;
+}
+
+.details {
+  width: 100%;
+  max-width: 420px;
+  margin: 0;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.row:last-child {
+  border-bottom: none;
+}
+
+dt {
+  color: var(--color-text-muted);
+}
+
+dd {
+  margin: 0;
+  font-weight: 600;
+}

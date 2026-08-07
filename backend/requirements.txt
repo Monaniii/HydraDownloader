@@ -1,0 +1,9 @@
+fastapi>=0.115.6
+uvicorn[standard]>=0.34.0
+pydantic>=2.11.0
+pydantic-settings>=2.7.1
+yt-dlp>=2025.1.15
+requests>=2.32.3
+aiosqlite>=0.20.0
+pytest>=8.3.0
+pytest-asyncio>=0.25.0

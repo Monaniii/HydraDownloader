@@ -1,0 +1,70 @@
+.app-shell {
+  height: 100vh;
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+.app-sidenav {
+  width: 240px;
+  border-right: 1px solid var(--color-border);
+  background: var(--color-surface);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 20px 20px 16px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.brand-icon {
+  font-size: 1.6rem;
+}
+
+.brand-name {
+  background: linear-gradient(135deg, #22d3ee, #a78bfa);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+mat-nav-list a {
+  border-radius: 10px;
+  margin: 4px 10px;
+  color: var(--color-text-muted);
+}
+
+mat-nav-list a.active {
+  background: var(--color-primary-soft);
+  color: var(--color-primary);
+}
+
+.bottom-nav {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.app-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.app-toolbar {
+  background: transparent;
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text);
+}
+
+.toolbar-title {
+  font-weight: 600;
+}
+
+.page-container {
+  flex: 1;
+  padding: 24px 32px;
+  overflow-y: auto;
+}

@@ -1,0 +1,87 @@
+<div class="dashboard">
+  <!-- Hero / URL input -->
+  <section class="hero glass">
+    <h1 class="hero-title">Download anything.</h1>
+    <p class="hero-subtitle">
+      Paste a link from YouTube, Vimeo, Twitch, and hundreds of other sites.
+    </p>
+
+    <form class="url-form" (ngSubmit)="analyze()">
+      <mat-form-field appearance="outline" class="url-field">
+        <mat-label>Video or playlist URL</mat-label>
+        <input matInput [(ngModel)]="url" name="url" placeholder="https://…" />
+        <mat-icon matPrefix>link</mat-icon>
+      </mat-form-field>
+      <button
+        mat-flat-button
+        color="primary"
+        type="submit"
+        [disabled]="!url.trim()"
+        class="analyze-btn"
+      >
+        <mat-icon>travel_explore</mat-icon>
+        Analyze
+      </button>
+    </form>
+  </section>
+
+  <!-- Health + quick actions -->
+  <div class="grid">
+    <mat-card class="glass card">
+      <mat-card-header>
+        <mat-icon mat-card-avatar>download</mat-icon>
+        <mat-card-title>Downloads</mat-card-title>
+      </mat-card-header>
+      <mat-card-content class="card-content">
+        <p>Manage your active queue, pause, resume and track progress.</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button routerLink="/downloads">Open Downloads</button>
+      </mat-card-actions>
+    </mat-card>
+
+    <mat-card class="glass card">
+      <mat-card-header>
+        <mat-icon mat-card-avatar>history</mat-icon>
+        <mat-card-title>History</mat-card-title>
+      </mat-card-header>
+      <mat-card-content class="card-content">
+        <p>Browse everything you've downloaded and re-download anytime.</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button routerLink="/history">View History</button>
+      </mat-card-actions>
+    </mat-card>
+
+    <mat-card class="glass card">
+      <mat-card-header>
+        <mat-icon mat-card-avatar>settings</mat-icon>
+        <mat-card-title>Settings</mat-card-title>
+      </mat-card-header>
+      <mat-card-content class="card-content">
+        <p>Configure download location, formats, and network options.</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button routerLink="/settings">Open Settings</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+
+  <!-- Backend status -->
+  <mat-card class="glass status-card">
+    <div class="status-row">
+      <mat-icon *ngIf="isChecking()" class="spin">autorenew</mat-icon>
+      <mat-icon *ngIf="!isChecking() && isHealthy()" class="ok">check_circle</mat-icon>
+      <mat-icon *ngIf="!isChecking() && !isHealthy()" class="bad">error</mat-icon>
+      <span>
+        {{
+          isChecking()
+            ? 'Checking backend…'
+            : isHealthy()
+              ? 'Backend is online'
+              : 'Backend is offline'
+        }}
+      </span>
+    </div>
+  </mat-card>
+</div>

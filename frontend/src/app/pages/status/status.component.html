@@ -1,0 +1,43 @@
+<div class="status-page">
+  <mat-card class="glass status-card">
+    <mat-card-header>
+      <mat-card-title>Backend Status</mat-card-title>
+      <mat-card-subtitle>FastAPI + yt-dlp service health</mat-card-subtitle>
+    </mat-card-header>
+
+    <mat-card-content class="body">
+      <mat-spinner *ngIf="isChecking()" diameter="40" />
+
+      <ng-container *ngIf="!isChecking()">
+        <div class="flag" [class.ok]="isHealthy()" [class.bad]="!isHealthy()">
+          <mat-icon>{{ isHealthy() ? 'check_circle' : 'error' }}</mat-icon>
+          <span class="flag-text">
+            {{ isHealthy() ? 'Operational' : 'Unavailable' }}
+          </span>
+        </div>
+
+        <dl class="details" *ngIf="status() as s">
+          <div class="row">
+            <dt>Status</dt>
+            <dd>{{ s.status }}</dd>
+          </div>
+          <div class="row">
+            <dt>Application</dt>
+            <dd>{{ s.app }}</dd>
+          </div>
+          <div class="row">
+            <dt>Version</dt>
+            <dd>{{ s.version }}</dd>
+          </div>
+        </dl>
+      </ng-container>
+    </mat-card-content>
+
+    <mat-card-actions align="end">
+      <button mat-stroked-button (click)="refresh()">
+        <mat-icon>refresh</mat-icon>
+        Refresh
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>

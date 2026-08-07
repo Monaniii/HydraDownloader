@@ -1,0 +1,202 @@
+.page {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.header-card {
+  padding: 16px 24px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.subtitle {
+  margin: 4px 0 0;
+  font-size: 0.9rem;
+  opacity: 0.65;
+}
+
+.header-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.filters {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.search-field {
+  flex: 1;
+  max-width: 420px;
+}
+
+.type-field {
+  width: 180px;
+}
+
+.table-card {
+  padding: 0;
+}
+
+.history-table {
+  width: 100%;
+}
+
+.history-table .mat-column-thumbnail {
+  width: 60px;
+  padding: 8px 0 8px 16px;
+}
+
+.history-table .mat-column-type {
+  width: 100px;
+}
+
+.history-table .mat-column-size {
+  width: 100px;
+}
+
+.history-table .mat-column-status {
+  width: 110px;
+}
+
+.history-table .mat-column-date {
+  width: 170px;
+}
+
+.history-table .mat-column-actions {
+  width: 110px;
+  text-align: right;
+  padding-right: 8px;
+}
+
+.thumb {
+  width: 48px;
+  height: 36px;
+  border-radius: 6px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.thumb.no-thumb mat-icon {
+  opacity: 0.4;
+}
+
+.title-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.title {
+  font-weight: 500;
+  max-width: 360px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.meta {
+  font-size: 0.8rem;
+  opacity: 0.6;
+}
+
+.type-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  background: rgba(33, 150, 243, 0.15);
+  color: #64b5f6;
+  text-transform: capitalize;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  background: rgba(255, 255, 255, 0.08);
+  color: #e0e0e0;
+  text-transform: capitalize;
+}
+
+.status-badge.completed {
+  background: rgba(76, 175, 80, 0.18);
+  color: #81c784;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 2px;
+}
+
+.actions .mat-mdc-icon-button {
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+}
+
+.actions .mat-mdc-icon-button .mat-icon {
+  font-size: 18px;
+  width: 18px;
+  height: 18px;
+  line-height: 18px;
+}
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 64px 24px;
+  gap: 12px;
+  opacity: 0.5;
+}
+
+.empty-state mat-icon {
+  font-size: 48px;
+  width: 48px;
+  height: 48px;
+}
+
+.empty-state p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.empty-state .hint {
+  font-size: 0.9rem;
+  opacity: 0.65;
+}
+
+.mono {
+  font-variant-numeric: tabular-nums;
+  font-size: 0.9rem;
+}
+

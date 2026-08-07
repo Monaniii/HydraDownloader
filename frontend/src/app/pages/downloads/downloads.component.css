@@ -1,0 +1,240 @@
+.page {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: 100%;
+  overflow-y: auto;
+}
+
+/* ---- Header card ---- */
+
+.header-card {
+  padding: 16px 24px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.subtitle {
+  margin: 4px 0 0;
+  font-size: 0.9rem;
+  opacity: 0.65;
+}
+
+.header-stats {
+  display: flex;
+  gap: 8px;
+}
+
+/* ---- Table card ---- */
+
+.table-card {
+  padding: 0;
+}
+
+.downloads-table {
+  width: 100%;
+}
+
+.downloads-table .mat-column-thumbnail {
+  width: 60px;
+  padding: 8px 0 8px 16px;
+}
+
+.downloads-table .mat-column-actions {
+  width: 160px;
+  text-align: right;
+  padding-right: 8px;
+}
+
+.downloads-table .mat-column-progress {
+  width: 180px;
+}
+
+.downloads-table .mat-column-speed,
+.downloads-table .mat-column-eta {
+  width: 100px;
+}
+
+.downloads-table .mat-column-status {
+  width: 120px;
+}
+
+/* ---- Thumbnail ---- */
+
+.thumb {
+  width: 48px;
+  height: 36px;
+  border-radius: 6px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.thumb.no-thumb mat-icon {
+  opacity: 0.4;
+}
+
+/* ---- Title cell ---- */
+
+.title-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.title {
+  font-weight: 500;
+  max-width: 320px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.meta {
+  font-size: 0.8rem;
+  opacity: 0.6;
+}
+
+/* ---- Progress cell ---- */
+
+.progress-cell {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.progress-cell mat-progress-bar {
+  flex: 1;
+  height: 6px;
+  border-radius: 3px;
+}
+
+.percent {
+  font-size: 0.85rem;
+  font-variant-numeric: tabular-nums;
+  min-width: 44px;
+  text-align: right;
+  opacity: 0.75;
+}
+
+/* ---- Status badge ---- */
+
+.status-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.status-badge.completed {
+  background: rgba(76, 175, 80, 0.18);
+  color: #81c784;
+}
+
+.status-badge.failed {
+  background: rgba(244, 67, 54, 0.18);
+  color: #e57373;
+}
+
+.status-badge.cancelled {
+  background: rgba(158, 158, 158, 0.18);
+  color: #bdbdbd;
+}
+
+.status-badge.paused {
+  background: rgba(255, 193, 7, 0.18);
+  color: #ffd54f;
+}
+
+.status-badge.active {
+  background: rgba(33, 150, 243, 0.18);
+  color: #64b5f6;
+}
+
+.status-badge.queued {
+  background: rgba(255, 255, 255, 0.08);
+  color: #e0e0e0;
+}
+
+.status-badge.retrying {
+  background: rgba(255, 152, 0, 0.18);
+  color: #ffb74d;
+}
+
+/* ---- Actions ---- */
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 2px;
+}
+
+.actions .mat-mdc-icon-button {
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+}
+
+.actions .mat-mdc-icon-button .mat-icon {
+  font-size: 18px;
+  width: 18px;
+  height: 18px;
+  line-height: 18px;
+}
+
+/* ---- Empty state ---- */
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 64px 24px;
+  gap: 12px;
+  opacity: 0.5;
+}
+
+.empty-state mat-icon {
+  font-size: 48px;
+  width: 48px;
+  height: 48px;
+}
+
+.empty-state p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.empty-state .hint {
+  font-size: 0.9rem;
+  opacity: 0.65;
+}
+
+/* ---- Mono numbers ---- */
+
+.mono {
+  font-variant-numeric: tabular-nums;
+  font-size: 0.9rem;
+}
+

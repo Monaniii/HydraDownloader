@@ -1,0 +1,49 @@
+<mat-sidenav-container class="app-shell">
+  <!-- Sidebar -->
+  <mat-sidenav
+    mode="side"
+    opened
+    [fixedInViewport]="true"
+    class="app-sidenav"
+  >
+    <div class="brand">
+      <span class="brand-icon">🐉</span>
+      <span class="brand-name">Hydra</span>
+    </div>
+
+    <mat-nav-list>
+      <a
+        mat-list-item
+        *ngFor="let item of navItems"
+        [routerLink]="item.route"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: item.exact }"
+      >
+        <mat-icon matListItemIcon>{{ item.icon }}</mat-icon>
+        <span matListItemTitle>{{ item.label }}</span>
+      </a>
+    </mat-nav-list>
+
+    <mat-nav-list class="bottom-nav">
+      <a
+        mat-list-item
+        [routerLink]="healthNav.route"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+        <mat-icon matListItemIcon>{{ healthNav.icon }}</mat-icon>
+        <span matListItemTitle>{{ healthNav.label }}</span>
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <!-- Content -->
+  <mat-sidenav-content class="app-content">
+    <mat-toolbar class="app-toolbar">
+      <span class="toolbar-title">Hydra Downloader</span>
+    </mat-toolbar>
+    <main class="page-container">
+      <router-outlet />
+    </main>
+  </mat-sidenav-content>
+</mat-sidenav-container>
